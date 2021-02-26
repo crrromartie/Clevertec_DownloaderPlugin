@@ -4,7 +4,7 @@ plugins {
     id 'com.gradle.plugin-publish' version '0.12.0'
 }
 
-group = 'ru.clevertec.crrromartie'
+group = 'com.clevertec'
 version = '1.0'
 
 gradlePlugin {
