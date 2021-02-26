@@ -1,0 +1,31 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+    id 'com.gradle.plugin-publish' version '0.12.0'
+}
+
+group = 'ru.clevertec.crrromartie'
+version = '1.0'
+
+gradlePlugin {
+    plugins {
+        downloadPlugin {
+            id = 'ru.clevertec.downloadPlugin'
+            displayName = 'Downloader plugin'
+            description = 'The plugin is used to download a file from the internet'
+            implementationClass = 'ru.clevertec.downloader.DownloadPlugin'
+        }
+    }
+}
+
+pluginBundle {
+    website = 'https://clevertec.ru/'
+    vcsUrl = 'https://github.com/crrromartie/Clevertec_DownloaderPlugin/'
+    tags = ['clevertec', 'download', 'downloader']
+}
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+}
